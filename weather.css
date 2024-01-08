@@ -6,14 +6,10 @@
         padding: 0;
         box-sizing: border-box;
     }
-
     body{
         background-color: #b5c5e0;
     }
-
-
     /* FIRST PAGE  */
-
     .pllogo{
         display: flex;
         justify-content: center;
@@ -28,19 +24,16 @@
         flex-direction: column;
         gap: 20px;
     }
-
     .first-page h1{
         font-size: 3rem;
         font-family: 'Titillium Web', sans-serif;
         font-weight: bold;
     }
-
     .weather-buttons{
         margin-top: 2rem;
         display: flex;
         gap: 15rem;
     }
-
     .weather-buttons button{
         padding: 8px 12px;
         border-radius: 7px;
@@ -53,30 +46,24 @@
         cursor: pointer;
         font-family: 'Roboto', sans-serif;
     }
-
     .weather-buttons button:hover{
         background-color:  #7aaad7;
         transform: scale(1.05);
         transition: all ease;
     }
-    
-
     .allow-access {
         font-size: 18px;
         font-family: 'Poppins', sans-serif;
     }
-
     .location-access{
         font-size: 22px;
         font-family: 'Poppins', sans-serif;
     }
-
     .grant-location-container{
         /* display: none; */
     }
 
     /* WEATHER INFORMATION PAGE  */
-
 
     .navbar{
         display: flex;
@@ -92,17 +79,14 @@
         position: fixed;
         top: 0;
     }
-
     .first-col{
         overflow: hidden;
         position: fixed;
         top: 80;
     }
-
     .second-col{
         margin-left: 23rem;
     }
-
     .search-button{
         border-radius: 15px;
         padding: 5px 15px;
@@ -115,13 +99,11 @@
         cursor: pointer;
         font-family: 'Roboto', sans-serif;
     }
-
     .search-button:hover{
         background-color:  #7aaad7;
         transform: scale(1.05);
         transition: all ease;
     }
-
     .search{
         margin-right: 10px;
         margin-left: 15rem;
@@ -132,55 +114,44 @@
         border: none;
         width: 300px;
         font-family: 'Poppins', sans-serif;
-
     }
-
     .title{
         font-family: 'Titillium Web', sans-serif;
         margin-top: 0.1rem;
     }
-
     .navbar img{
         margin-left: 4rem ;
         margin-right: 5px;
     }
-
     .wearhter-search-page{
         display: none;
     }
-
     .information {
-            display: grid;
-            grid-template-columns: 400px 950px;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            margin-top: 7.5rem;       
+        display: grid;
+        grid-template-columns: 400px 950px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin-top: 7.5rem;       
     }
-
     .weather , .today-highlight , .five-days-forecast , .today-temperature {
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.461) , rgba(255, 255, 255, 0.288));
         padding: 20px;
         border-radius: 25px;
         box-shadow: 0px 16px 30px -10px rgba(179, 179, 189, 0.5);
     }
-
     .weather{
         margin-left: 5rem;
         font-size: 1.8rem;
-        font-family: 'Roboto', sans-serif;
-        
+        font-family: 'Roboto', sans-serif;  
     }
-
     .weather-description-area{
         display: flex;
         align-items: center;
         gap: 10px;
     }
-
     .weather-description{
         margin-top: 10px;
     }
-
     .place {
         display: flex;
         gap: 15px;
@@ -189,28 +160,20 @@
         font-size: 1.2rem;
         margin-bottom: 10px;
     }
-
     .cityname , .temperature-reading , .weather-description{
         margin-bottom: 10px;
     }
-
     .temperature{
         font-size: 3.5rem;
     }
-
     .temperature-reading{
         font-size: 2.5rem;
     }
-
-
     .five-days-forecast{
         margin-top: 2rem;
         margin-left: 5rem;
         height: 290px;
     }
-
-
-
     .five{
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
@@ -225,36 +188,30 @@
         font-size: 1.2rem;
         font-family: 'Roboto', sans-serif;
     }
-
     .days{
         margin-top: 1.7rem;
     }
-
     .today-highlight{
         margin-left: 60px;
         width: 950px;
         height: 440px;
     }
-
     .today-info{
         display: flex;
         gap: 30px;
         flex-wrap: wrap;
     }
-
     .oneline{
         display: flex;
         gap: 15px;
         align-items: center;
         justify-content: center;
     }
-
     .today{
         font-family: 'Roboto', sans-serif;
         font-size: 1.5rem;
         margin: 5px 0px 20px 10px;
     }
-
     .temperature-index{
         display: flex;
         gap: 30px ;
@@ -263,49 +220,38 @@
         font-family: 'Roboto', sans-serif;
         color: rgb(70, 69, 69);
     }
-
     .heading{
         font-size: 1.2rem;
         font-family: 'Roboto', sans-serif;
         color: rgba(70, 70, 70, 0.733);
-        
     }
-
     .temperature-info{
         background-color: #b5c5e077;
         padding: 20px;
         border-radius: 20px;
         width: 405px;
     }
-
     .sub-heading{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
     .sub-content{
         font-size: 2.1rem;
         color: rgba(0, 0, 0, 0.826);
         margin-top: 5px;
     }
-
-
-
-
     .sunset-time , .sunrise-time{
         margin-top: 12px;
         margin-right: 10px;
     }
-
     .sun-info{
         background-color: #b5c5e077;
         padding: 20px;
         border-radius: 20px;
         width: 338px;
     }
-
     .sun-index{
         display: flex;
         gap: 30px ;
@@ -314,7 +260,6 @@
         font-family: 'Roboto', sans-serif;
         color: rgb(70, 69, 69);
     }
-
     .humidity-info , .pressure-info , .wind-info , .visiblity-info{
         background-color: #b5c5e077;
         padding-top: 20px;
@@ -325,14 +270,12 @@
         flex-direction: column;
         align-items: center;
     }
-
     .humidity-content , .pressure-content , .wind-content , .visiblity-content{
         font-size: 2.1rem;
         color: rgba(0, 0, 0, 0.826);
         margin-top: 10px;
         font-family: 'Roboto', sans-serif;
     }
-
     .today-temperature{
         margin-left: 60px;
         width: 950px;
@@ -340,13 +283,11 @@
         margin-top: 30px;
         margin-bottom: 40px;
     }
-
     .times{
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
     }
-
     .slot1 , .slot2 , .slot3 , .slot4 , .slot5 , .slot6 , .slot7 , .slot8 , .slot9 , .slot10 ,.slot11 , .slot12{
         background-color: #b5c5e077;
         width: 135px;
