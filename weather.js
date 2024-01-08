@@ -6,6 +6,7 @@ const searchweatherbtn = document.querySelector(".search-weather-button");
 
 
 function weatherinfo(data) {
+
     document.querySelector(".cityname").innerHTML = data.city.name + " ,";
     document.querySelector(".country1").innerHTML = data.city.country;
     document.querySelector(".temperature").innerHTML = parseInt(data.list[0].main.temp - 273);
@@ -17,6 +18,7 @@ function weatherinfo(data) {
     document.querySelector(".feels-like").innerHTML = parseInt(data.list[0].main.feels_like - 273) + " °C";
     document.querySelector(".min-temp").innerHTML = parseInt(data.list[0].main.temp_min - 273) + " °C";
     document.querySelector(".max-temp").innerHTML = parseInt(data.list[0].main.temp_max - 273) + " °C";
+
     document.querySelector(".humidity-content").innerHTML = data.list[0].main.humidity + " %";
     document.querySelector(".pressure-content").innerHTML = data.list[0].main.pressure + " hPa";
     document.querySelector(".wind-content").innerHTML = data.list[0].wind.speed + " km/hr";
@@ -50,6 +52,7 @@ function todayforcast(data) {
     for (j = 0; j < 12; j++) {
 
         function timeTo12HrFormat(time) {
+
             var time_part_array = time.split(":");
             var ampm = 'AM';
 
@@ -73,10 +76,12 @@ function todayforcast(data) {
     }
 
     for(let k=0 ; k<12 ; k++){
+
         let dates = new Date(data.list[k].dt_txt);
         const month = dates.toLocaleString('default', { month: 'long' });
         let todaydate = document.querySelector(`.slot${k+1}-date`) ;
         todaydate.innerHTML = (data.list[k].dt_txt).slice(8, 10) + " " + (month).slice(0, 3);
+
     }
 
 
@@ -88,15 +93,19 @@ function fivedays(data) {
     for (let j = 1; j <= 5; j++) {
 
         for (let i = 0; i <= data.list.length; i++) {
+
             let dates = new Date(data.list[i].dt_txt);
             const month = dates.toLocaleString('default', { month: 'long' });
+
             var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             var dayName = days[dates.getDay()];
+
             document.querySelector(`.dayname${j}`).innerHTML = dayName;
             document.querySelector(`.date${j}`).innerHTML = (data.list[i].dt_txt).slice(8, 10) + " " + (month).slice(0, 3);
             document.querySelector(`.temp${j}`).innerHTML = parseInt(data.list[i].main.temp - 273) + " °C";
             i += 7;
             j++;
+
         }
 
     }
@@ -106,15 +115,13 @@ function fivedays(data) {
 async function getweather(city) {
 
     await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=79f921af4d0827fc9828f0585a641b41`)
+
         .then(response => {
             return response.json()
         }).then(data => {
-
             weatherinfo(data);
             todayforcast(data);
             fivedays(data);
-
-
         })
         .catch(error => {
             console.log("Error occured");
@@ -149,10 +156,13 @@ function getlocation() {
 }
 
 async function showPosition(data) {
+
     document.querySelector(".grant-location-container").style.display = "none";
     document.querySelector(".wearhter-search-page").style.display = "block";
+
     let lat = data.coords.latitude;
     let lon = data.coords.longitude;
+
     await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=79f921af4d0827fc9828f0585a641b41
     `)
         .then(response => {
@@ -168,6 +178,7 @@ async function showPosition(data) {
         });
 
 }
+
 
 allowbtn.addEventListener("click", getlocation);
 
