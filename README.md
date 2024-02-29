@@ -36,6 +36,3 @@ To use the OpenWeather API, you need to sign up for an API key [here](https://ho
 
 Contributions are welcome! Feel free to open issues or pull requests for any improvements or features you'd like to add. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
